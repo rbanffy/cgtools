@@ -2,7 +2,7 @@
 import sys
 
 if len(sys.argv) != 5:
-    sys.exit("Usage: {} chargen.rom height width offset".format(sys.argv[1]))
+    sys.exit("Usage: {} chargen.rom height width offset".format(sys.argv[0]))
 
 size_v = int(sys.argv[2])
 size_h = int(sys.argv[3])
