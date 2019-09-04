@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 import sys
 
-if len(sys.argv) != 4:
-    sys.exit("Usage: {} chargen.rom height width".format(sys.argv[1]))
+if len(sys.argv) != 5:
+    sys.exit("Usage: {} chargen.rom height width offset".format(sys.argv[1]))
 
 size_v = int(sys.argv[2])
 size_h = int(sys.argv[3])
 
 bytes_h = size_h // 8
 
+offset = int(sys.argv[4])
+
 with open(sys.argv[1], "rb") as f:
-    offset = 0
+    f.seek(offset)
     lines = 0
     symbol = 0
     while True:
