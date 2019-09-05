@@ -23,7 +23,7 @@ with open(sys.argv[1], "rb") as f:
                 symbol += 1
             print(
                 "{0:7n}".format(offset),
-                ("{:08b}" * bytes_h)
+                ("{:08b}" * len(c))
                 .format(*c)
                 .replace("0", ".")
                 .replace("1", "\u2588"),
