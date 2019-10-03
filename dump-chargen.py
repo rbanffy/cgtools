@@ -19,7 +19,7 @@ with open(sys.argv[1], "rb") as f:
         c = f.read(bytes_h)
         if c:
             if (lines % size_v) == 0:
-                print("\n {0:4d}".format(symbol))
+                print("\n {0:4d} {0:4x}".format(symbol, symbol))
                 symbol += 1
             print(
                 "{0:7n}".format(offset),
